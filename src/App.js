@@ -14,7 +14,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text>Ok</Text>
         <Text>kangallllll</Text>
-        <Text> mdt </Text>
+        <Text> MTD </Text>
       </View>
     );
   }
