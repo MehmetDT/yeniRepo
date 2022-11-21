@@ -14,6 +14,7 @@ export default class App extends Component {
       <View style={styles.container}>
         <Text>Ok</Text>
         <Text>kangallllll</Text>
+        <Text> yeni yazi</Text>
       </View>
     );
   }
