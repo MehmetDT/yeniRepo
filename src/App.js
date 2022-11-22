@@ -26,7 +26,7 @@ export default class About extends Component {
         </TouchableOpacity>
 
         <Text style={styles.tyab}> Tell your about </Text>
-        <TextInput placeHolder/>
+        <TextInput placeHolder />
         <TouchableOpacity>
           <Text>Continue</Text>
         </TouchableOpacity>
@@ -51,9 +51,9 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
   },
-  tyab:{
-    fontSize:24,
-    fontWeight:'bold',
-    color:'#4B164C'
-  }
+  tyab: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#4B164C',
+  },
 });

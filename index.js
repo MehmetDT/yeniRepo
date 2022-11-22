@@ -4,12 +4,12 @@ import { AppRegistry } from 'react-native';
 import App from './src/App';
 import { name as appName } from './app.json';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import First from './src/screens/first';
-import Second from './src/screens/second';
+import Name from './src/screens/Name';
+import About from './src/screens/About';
 
 const BottomBar = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 
 
 
-AppRegistry.registerComponent(appName, () => Second);
+AppRegistry.registerComponent(appName, () => App);

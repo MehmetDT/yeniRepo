@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView } from 'react-native';
 
-export default class Second extends Component {
+export default class Name extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,7 +13,7 @@ export default class Second extends Component {
     return (
       <SafeAreaView style={styles.container}>
         <TouchableOpacity>
-          <Image style={styles.borderIcon} source={require("../assets/images/Icon.png")} />
+          <Image style={styles.borderIcon} source={require("../assets/images/back.png")} />
         </TouchableOpacity>
         <View style={styles.headerText}>
           <Text style={styles.txtStyle} >What's Your Name?</Text>
