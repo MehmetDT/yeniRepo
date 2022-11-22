@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
-export default class element extends Component {
+export default class Usnn extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,18 +11,18 @@ export default class element extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-
-      </View>
+        <TouchableOpacity>
+            <Text style={styles.sbhdrtxt}>{this.props.sbhdr}</Text>
+          </TouchableOpacity>
+      
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'white',
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
+    sbhdrtxt:{
+        fontSize:17,
+        fontWeight:'500',
+      }
+  
 })
