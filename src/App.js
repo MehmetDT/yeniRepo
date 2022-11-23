@@ -7,6 +7,7 @@ import {
   StyleSheet,
   ScrollView,
   ImageBackground,
+  StatusBar,
 } from 'react-native';
 import Interests from './components/Interests';
 import OnlineUsers from './components/OnlinUsers';
@@ -20,6 +21,7 @@ export default class UserProfile extends Component {
   render() {
     return (
       <ScrollView showsVerticalScrollIndicator="false" style={styles.container}>
+        <StatusBar barStyle={"light-content"} />
         <ImageBackground
           source={require('./assets/images/userprofile.png')}
           style={styles.prflimage}>
