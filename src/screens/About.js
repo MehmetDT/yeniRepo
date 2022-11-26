@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   tyab: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: 'bold',
     color: '#4B164C',
   },

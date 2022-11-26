@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView, TextInput } from 'react-native';
 
 export default class Name extends Component {
   constructor(props) {
@@ -12,16 +12,22 @@ export default class Name extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <TouchableOpacity>
-          <Image style={styles.borderIcon} source={require("../assets/images/back.png")} />
-        </TouchableOpacity>
-        <View style={styles.headerText}>
-          <Text style={styles.txtStyle} >What's Your Name?</Text>
-        </View>
-        <View style={styles.nameInput}>
+      <TouchableOpacity style={styles.bckcntnr}>
+        <Image
+          source={require('../assets/images/back.png')}
+          style={styles.back}
+        />
+      </TouchableOpacity>
 
-        </View>
-      </SafeAreaView>
+      <Text style={styles.tyab}>What is your name? </Text>
+      <View style={styles.txtinpt}>
+        <TextInput style={styles.txt} placeholder="" />
+      </View>
+
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttontxt}>Continue</Text>
+      </TouchableOpacity>
+    </SafeAreaView>
     );
   }
 }
@@ -30,29 +36,52 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: 'white',
     flex: 1,
-
+    alignItems: 'center',
+    justifyContent:'flex-start'
   },
-  borderIcon: {
-    width: 45,
-    height: 45,
-    marginLeft: 20
+  bckcntnr: {
+    width: 375,
+    height: 92,
+    justifyContent: 'center',
+    marginLeft: 20,
   },
-  headerText: {
-    alignItems: "center",
-    marginTop: 20
+  back: {
+    width: 40,
+    height: 40,
   },
-  txtStyle: {
-    color: "#4B164C",
-    fontWeight: "bold",
-    fontSize: 25
+  tyab: {
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: '#4B164C',
   },
-  nameInput: {
-    width:370,
+  txtinpt: {
+    width: 327,
     height: 50,
-    backgroundColor: "red",
-    marginLeft:30,
-    marginTop:20,
-    borderColor:"black",
-    borderRadius:10
+    borderColor:'purple',
+    borderWidth:1,
+    borderRadius:10,
+    marginTop:30,
+    justifyContent:'flex-start',
+  
+  },
+  txt:{
+    fontSize:14,
+    fontWeight:'400',
+    color:'#22172A',
+    margin:10,
+  },
+  button:{
+    marginTop:60,
+    justifyContent:'center',
+    alignItems:'center',
+    width:295,
+    height:56,
+    backgroundColor:'purple',
+    borderRadius:22,
+  },
+  buttontxt:{
+    fontSize:16,
+    fontWeight:'bold',
+    color:'white'
   }
 })
