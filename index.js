@@ -7,12 +7,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Name from './src/screens/Name';
 import About from './src/screens/About';
 import AboutSecond from "./src/screens/AboutSecond"
+import Favorites from "./src/screens/Favorites"
+import ProfilesCmp from './src/components/ProfilesCmp';
 import Splash from "./src/screens/Splash"
-import Nearby from "./src/screens/Nearby"
 
 const BottomBar = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 
 
 
-AppRegistry.registerComponent(appName, () => Nearby);
+AppRegistry.registerComponent(appName, () => Favorites);

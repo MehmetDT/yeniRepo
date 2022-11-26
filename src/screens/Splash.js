@@ -17,9 +17,9 @@ export default class Splash extends Component {
   render() {
     return (
       <ImageBackground
-        source={require('./assets/images/bckgrnd.png')}
+        source={require('../assets/images/bckgrnd.png')}
         style={styles.bckgrnd}>
-        <Image source={require('./assets/images/migo.png')} style={styles.migo} />
+        <Image source={require('../assets/images/migo.png')} style={styles.migo} />
       </ImageBackground>
     );
   }
