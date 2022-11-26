@@ -11,10 +11,11 @@ import Favorites from "./src/screens/Favorites"
 import ProfilesCmp from './src/components/ProfilesCmp';
 import Splash from "./src/screens/Splash"
 import Dropdown from "./src/screens/Dropdown"
+import Profile from "./src/screens/Profile"
 
 const BottomBar = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 
 
 
-AppRegistry.registerComponent(appName, () => Dropdown);
+AppRegistry.registerComponent(appName, () => Profile);
