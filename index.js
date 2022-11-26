@@ -10,10 +10,11 @@ import AboutSecond from "./src/screens/AboutSecond"
 import Favorites from "./src/screens/Favorites"
 import ProfilesCmp from './src/components/ProfilesCmp';
 import Splash from "./src/screens/Splash"
+import Dropdown from "./src/screens/Dropdown"
 
 const BottomBar = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
 
 
 
-AppRegistry.registerComponent(appName, () => Favorites);
+AppRegistry.registerComponent(appName, () => Dropdown);
