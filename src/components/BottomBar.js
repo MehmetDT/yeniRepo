@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Dimensions, Animated, TouchableOpacity, Text} from 'react-native';
+import { View, StyleSheet, Dimensions, Animated, TouchableOpacity, Text, Image } from 'react-native';
 import { hp, wp } from '../configs/react-native-responsive';
 
 export default class Bottom extends Component {
@@ -13,17 +13,32 @@ export default class Bottom extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flex: 1, height: hp(10) }} onPress={() => {
-                    this.props.navigation.navigate('Home')}}>
-                    <Text style={{ color: 'white' }}>Hello</Text>
+                <TouchableOpacity
+                    onPress={() => {
+                        this.props.navigation.navigate('About ')
+                    }}>
+                    <Image style={styles.bttm} source={require('../assets/images/nearbybottom.png')}/>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flex: 1, height: hp(10) }} onPress={() => {
-                    this.props.navigation.navigate('Second')}}>
-                    <Text style={{ color: 'white' }}>Second</Text>
+                <TouchableOpacity onPress={() => {
+                    this.props.navigation.navigate('Favorites')
+                }}>
+                    <Image style={styles.bttm} source={require('../assets/images/favoritesbottom.png')}/>
                 </TouchableOpacity>
 
-            </View >
+                <TouchableOpacity onPress={() => {
+                    this.props.navigation.navigate('Message')
+                }}>
+                    <Image style={styles.bttm} source={require('../assets/images/messagebottom.png')}/>
+                </TouchableOpacity>
+
+                <TouchableOpacity onPress={() => {
+                    this.props.navigation.navigate('Profile')
+                }}>
+                    <Image style={styles.bttm} source={require('../assets/images/profilebottom.png')}/>
+                </TouchableOpacity>
+
+            </View>
         );
     }
 }
@@ -31,14 +46,20 @@ export default class Bottom extends Component {
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        backgroundColor: '#131419',
         height: hp(10),
         position: 'absolute',
         bottom: 0,
         width: wp(100),
         alignItems: 'center',
         justifyContent: 'space-around',
-        paddingLeft: wp(9),
-        paddingRight: wp(9)
+        backgroundColor:'white'
+       
+    },
+    bttm:{
+        width:30,
+        height:30,
+        
+
     }
+    
 })

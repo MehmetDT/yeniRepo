@@ -15,50 +15,88 @@ import Profile from "./src/screens/Profile"
 import Nearby from './src/screens/Nearby';
 import UserProfile from './src/screens/UserProfile';
 import Message from "./src/screens/Message"
-import BottomBarAppp from './src/screens/BottomBarApp';
+import Bottom from './src/components/BottomBar';
 
-const BottomBar = createBottomTabNavigator()
-const Stack = createNativeStackNavigator()
+const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
-function BottomBarApp() {
+function BottomNavigation() {
     return (
-        <BottomBar.Navigator tabBar={(props) => <Bottom {...props} />}>
-            <BottomBar.Screen name='Nearby' component={Nearby} />
-            <BottomBar.Screen name='Favorites' component={Favorites} />
-            <BottomBar.Screen name='Message' component={Message} />
-            <BottomBar.Screen name='Profile' component={Profile} />
-        </BottomBar.Navigator>
+        <Tab.Navigator tabBar={(props) => <Bottom {...props} />}>
 
+            <Tab.Screen options={{
+                headerShown: false,
+                tabBarVisible: false,
+            }} name="Nearby" component={Nearby} />
 
-    )
+            <Tab.Screen options={{
+                headerShown: false,
+                tabBarVisible: false,
+            }} name="Favorites" component={Favorites} />
+
+            <Tab.Screen options={{
+                headerShown: false,
+                tabBarVisible: false,
+            }} name="Message" component={Message} />
+
+            <Tab.Screen options={{
+                headerShown: false,
+                tabBarVisible: false,
+            }} name="Profile" component={Profile} />
+
+        </Tab.Navigator>
+    );
 }
+
+
 
 function StackApp() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen options={{
+                    animationEnabled: true,
+                    animationTypeForReplace: 'pop',
+                    headerBackTitleVisible: false,
+                    gestureEnabled: false,
                     headerShown: false
+
                 }} name='Splash' component={Splash} />
-                <Stack.Screen options={{
-                    headerShown: false
-                }} name='Home' component={BottomBarApp} />
 
                 <Stack.Screen options={{
+                    animationEnabled: true,
+                    animationTypeForReplace: 'pop',
+                    headerBackTitleVisible: false,
+                    gestureEnabled: false,
                     headerShown: false
+
                 }} name='Name' component={Name} />
 
                 <Stack.Screen options={{
+                    animationEnabled: true,
+                    animationTypeForReplace: 'pop',
+                    headerBackTitleVisible: false,
+                    gestureEnabled: false,
                     headerShown: false
+
                 }} name='About' component={About} />
 
                 <Stack.Screen options={{
+                    animationEnabled: true,
+                    animationTypeForReplace: 'pop',
+                    headerBackTitleVisible: false,
+                    gestureEnabled: false,
                     headerShown: false
+
                 }} name='AboutSecond' component={AboutSecond} />
 
                 <Stack.Screen options={{
+                    animationEnabled: true,
+                    animationTypeForReplace: 'pop',
+                    headerBackTitleVisible: false,
+                    gestureEnabled: false,
                     headerShown: false
-                }} name='Nearby' component={Nearby} />
+                }} name='Nearby' component={BottomNavigation} />
 
 
             </Stack.Navigator>

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   View,
   Text,
@@ -24,10 +24,13 @@ export default class Nearby extends Component {
       <SafeAreaView style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.nrbytxt}>Nearby</Text>
-          <Image
-            style={styles.filter}
-            source={require('../assets/images/filter.png')}
-          />
+          <TouchableOpacity>
+            <Image
+              style={styles.filter}
+              source={require('../assets/images/filter.png')}
+            />
+          </TouchableOpacity>
+
         </View>
         <View style={styles.usnn}>
           <Usnn sbhdr="All user" />
@@ -35,7 +38,7 @@ export default class Nearby extends Component {
           <Usnn sbhdr="New" />
           <Usnn sbhdr="Nearby" />
         </View>
-        <ScrollView  showsVerticalScrollIndicator="false">
+        <ScrollView showsVerticalScrollIndicator="false">
           <View style={styles.scrllvw}>
             <ProfilesCmp />
             <ProfilesCmp />
@@ -45,7 +48,7 @@ export default class Nearby extends Component {
             <ProfilesCmp />
             <ProfilesCmp />
             <ProfilesCmp />
-            
+
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -85,7 +88,7 @@ const styles = StyleSheet.create({
   scrllvw: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    alignItems:'center',
-    justifyContent:'center',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

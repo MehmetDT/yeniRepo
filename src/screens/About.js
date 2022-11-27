@@ -18,7 +18,9 @@ export default class About extends Component {
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <TouchableOpacity style={styles.bckcntnr}>
+        <TouchableOpacity onPress={()=>{
+        this.props.navigation.pop()
+        }} style={styles.bckcntnr}>
           <Image
             source={require('../assets/images/back.png')}
             style={styles.back}
@@ -46,12 +48,10 @@ const styles = StyleSheet.create({
     justifyContent:'flex-start'
   },
   bckcntnr: {
-    width: 375,
-    height: 92,
+    width: 100,
     justifyContent: 'center',
-    marginLeft: 20,
   },
-  back: {
+    back: {
     width: 40,
     height: 40,
   },

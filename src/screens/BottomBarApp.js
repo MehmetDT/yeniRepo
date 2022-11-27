@@ -11,33 +11,7 @@ export default class BottomBarApp extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-            <TouchableOpacity
-                onPress={() => {
-                    this.props.navigation.navigate('Nearby')
-                }}>
-                <Text style={styles.textBottom}>Nearby</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => {
-                this.props.navigation.navigate('Favorites')
-            }}>
-                <Text style={styles.textBottom}>Favorites </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity onPress={() => {
-                this.props.navigation.navigate('Message')
-            }}>
-                <Text style={styles.textBottom}>Message</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity onPress={() => {
-                this.props.navigation.navigate('Profile')
-            }}>
-                <Text style={styles.textBottom}>Profile</Text>
-            </TouchableOpacity>
-
-        </View>
+            <View></View>
         );
     }
 }
