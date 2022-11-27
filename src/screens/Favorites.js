@@ -12,7 +12,7 @@ import {
 import ProfilesCmp from '../components/ProfilesCmp';
 import Usnn from '../components/Usnn';
 
-export default class Nearby extends Component {
+export default class Favorites extends Component {
   constructor(props) {
     super(props);
     this.state = {};

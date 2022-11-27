@@ -8,10 +8,10 @@ import {
   SafeAreaView,
   ScrollView,
   ImageBackground,
+  TextInput
 } from 'react-native';
-import {TextInput} from 'react-native-gesture-handler';
-import OnlineUsers from './components/OnlinUsers';
-import SentMessages from './components/SentMessages';
+import OnlineUsers from '../components/OnlinUsers';
+import SentMessages from "../components/SentMessages"
 
 export default class Message extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ export default class Message extends Component {
         </View>
         <View style={styles.searchcnt}>
           <Image
-            source={require('./assets/images/search.png')}
+            source={require('../assets/images/search.png')}
             style={styles.searchpng}
           />
           <TextInput placeholderTextColor={'#9B9B9B'} placeholder="Search..." />

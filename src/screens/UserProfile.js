@@ -9,8 +9,9 @@ import {
   ImageBackground,
   StatusBar,
 } from 'react-native';
-import Interests from './components/Interests';
-import OnlineUsers from './components/OnlinUsers';
+import Interests from '../components/Interests';
+import OnlineUsers from '../components/OnlinUsers';
+
 
 export default class UserProfile extends Component {
   constructor(props) {
@@ -23,27 +24,27 @@ export default class UserProfile extends Component {
       <ScrollView showsVerticalScrollIndicator="false" style={styles.container}>
         <StatusBar barStyle={"light-content"} />
         <ImageBackground
-          source={require('./assets/images/userprofile.png')}
+          source={require("../assets/images/userprofile.png")}
           style={styles.prflimage}>
           <View style={styles.clandrctcnt}>
             <TouchableOpacity>
               <Image
-                source={require('./assets/images/close.png')}
+                source={require('../assets/images/close.png')}
                 style={styles.closepng}
               />
             </TouchableOpacity>
             <View style={styles.rctnglcnt}>
               <Image
                 style={styles.rectanglepng}
-                source={require('./assets/images/rectangle.png')}
+                source={require('../assets/images/rectangle.png')}
               />
               <Image
                 style={styles.rectanglepng}
-                source={require('./assets/images/rectangle.png')}
+                source={require('../assets/images/rectangle.png')}
               />
               <Image
                 style={styles.rectanglepng}
-                source={require('./assets/images/rectangle.png')}
+                source={require('../assets/images/rectangle.png')}
               />
             </View>
           </View>
@@ -55,7 +56,7 @@ export default class UserProfile extends Component {
             <View style={styles.genage}>
               <Image
                 style={styles.gender}
-                source={require('./assets/images/woman.png')}
+                source={require('../assets/images/woman.png')}
               />
               <Text style={styles.age}>23</Text>
             </View>
@@ -123,13 +124,13 @@ export default class UserProfile extends Component {
         </View>
         <View style={styles.lslmcnt}>
           <TouchableOpacity>
-            <Image style={styles.lslm} source={require('./assets/images/like.png')}/>
+            <Image style={styles.lslm} source={require('../assets/images/like.png')}/>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image style={styles.lslm} source={require('./assets/images/superlike.png')}/>
+            <Image style={styles.lslm} source={require('../assets/images/superlike.png')}/>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Image style={styles.lslm} source={require('./assets/images/message.png')}/>
+            <Image style={styles.lslm} source={require('../assets/images/message.png')}/>
           </TouchableOpacity>
         </View>
         </View>

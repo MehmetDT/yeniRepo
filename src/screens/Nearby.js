@@ -9,8 +9,9 @@ import {
   ImageBackground,
   ScrollView,
 } from 'react-native';
-import ProfilesCmp from './components/ProfilesCmp';
-import Usnn from './components/Usnn';
+import ProfilesCmp from '../components/ProfilesCmp';
+import Usnn from '../components/Usnn';
+
 
 export default class Nearby extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ export default class Nearby extends Component {
           <Text style={styles.nrbytxt}>Nearby</Text>
           <Image
             style={styles.filter}
-            source={require('./assets/images/filter.png')}
+            source={require('../assets/images/filter.png')}
           />
         </View>
         <View style={styles.usnn}>
