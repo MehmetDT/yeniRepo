@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, Image, StyleSheet, } from 'react-native';
 
-export default class BottomBarAppp extends Component {
+export default class BottomBarApp extends Component {
     constructor(props) {
         super(props);
         this.state = {

@@ -8,10 +8,17 @@ import {
   ImageBackground,
 } from 'react-native';
 
+
 export default class Splash extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+     this.props.navigation.navigate('Name')
+    }, 1000)
   }
 
   render() {

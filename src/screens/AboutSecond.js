@@ -36,7 +36,7 @@ export default class Third extends Component {
         </View>
 
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress = {()=> this.props.navigation.navigate('Nearby')} style={styles.button}>
           <Text style={styles.buttontxt}>Continue</Text>
         </TouchableOpacity>
       </SafeAreaView>

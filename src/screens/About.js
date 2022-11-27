@@ -30,7 +30,7 @@ export default class About extends Component {
           <TextInput style={styles.txt} placeholder="" />
         </View>
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress = {()=> this.props.navigation.navigate('AboutSecond')} style={styles.button}>
           <Text style={styles.buttontxt}>Continue</Text>
         </TouchableOpacity>
       </SafeAreaView>

@@ -15,7 +15,7 @@ import Profile from "./src/screens/Profile"
 import Nearby from './src/screens/Nearby';
 import UserProfile from './src/screens/UserProfile';
 import Message from "./src/screens/Message"
-import BottomBarAppp from './src/screens/BottomBarAppp';
+import BottomBarAppp from './src/screens/BottomBarApp';
 
 const BottomBar = createBottomTabNavigator()
 const Stack = createNativeStackNavigator()
@@ -46,15 +46,20 @@ function StackApp() {
 
                 <Stack.Screen options={{
                     headerShown: false
-                }} name='Message' component={Message} />
+                }} name='Name' component={Name} />
 
                 <Stack.Screen options={{
                     headerShown: false
-                }} name='Favorites' component={Favorites} />
+                }} name='About' component={About} />
 
                 <Stack.Screen options={{
                     headerShown: false
-                }} name='Profile' component={Profile} />
+                }} name='AboutSecond' component={AboutSecond} />
+
+                <Stack.Screen options={{
+                    headerShown: false
+                }} name='Nearby' component={Nearby} />
+
 
             </Stack.Navigator>
         </NavigationContainer>
@@ -62,4 +67,4 @@ function StackApp() {
 }
 
 
-AppRegistry.registerComponent(appName, () => Message);
+AppRegistry.registerComponent(appName, () => StackApp);

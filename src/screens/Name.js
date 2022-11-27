@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView, TextInput } from 'react-native';
-
+import BottomBarAppp from './BottomBarApp';
 export default class Name extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +24,7 @@ export default class Name extends Component {
         <TextInput style={styles.txt} placeholder="" />
       </View>
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity onPress = {()=> this.props.navigation.navigate('About') } style={styles.button}>
         <Text style={styles.buttontxt}>Continue</Text>
       </TouchableOpacity>
     </SafeAreaView>
